@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1019,4032</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,4216</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -36,7 +36,7 @@
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
-    <scg:List x:TypeArguments="AssemblyReference" Capacity="22">
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="44">
       <AssemblyReference>System.Activities</AssemblyReference>
       <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>mscorlib</AssemblyReference>
@@ -59,9 +59,10 @@
       <AssemblyReference>UiPath.Excel</AssemblyReference>
       <AssemblyReference>UiPath.CV</AssemblyReference>
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="999,3972" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap:VirtualizedContainerService.HintSize="999,4051" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="text1" />
       <Variable x:TypeArguments="sd:DataTable" Name="Output" />
@@ -74,7 +75,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="957,1548" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[&quot;http://www.bvmt.com.tn/fr/&quot;+in_banque+&quot;-etats-financiers-annuels-consolid%C3%A9s-31-12-&quot;+in_annee]">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="957,1528" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[&quot;http://www.bvmt.com.tn/fr/&quot;+in_banque+&quot;-etats-financiers-annuels-consolid%C3%A9s-31-12-&quot;+in_annee]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -392,6 +393,7 @@
     </If>
     <ui:WriteRange AddHeaders="False" DataTable="[Output]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="957,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="[&quot;C:\Users\user\Downloads\Reports\&quot;+in_banque+&quot;-&quot;+in_annee+&quot;.xlsx&quot;]" />
     <ui:Beep sap:VirtualizedContainerService.HintSize="957,22" sap2010:WorkflowViewState.IdRef="Beep_1" />
+    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="957,59" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[in_banque +&quot; Terminée&quot;]" />
     <ui:KillProcess ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="957,22" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="chrome" />
   </Sequence>
 </Activity>
