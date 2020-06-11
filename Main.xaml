@@ -6,7 +6,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1234,4017</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,2546</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="23">
@@ -62,7 +62,7 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1118,3852" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence sap:VirtualizedContainerService.HintSize="999,2381" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="text1" />
       <Variable x:TypeArguments="sd:DataTable" Name="Output" />
@@ -76,7 +76,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="1076,1528" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[&quot;http://www.bvmt.com.tn/fr/&quot;+in_banque+&quot;-etats-financiers-annuels-consolid%C3%A9s-31-12-&quot;+in_annee]">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="957,1528" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="[&quot;http://www.bvmt.com.tn/fr/&quot;+in_banque+&quot;-etats-financiers-annuels-consolid%C3%A9s-31-12-&quot;+in_annee]">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -131,7 +131,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <If.Then>
-                    <Sequence sap:VirtualizedContainerService.HintSize="376,213" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                    <Sequence sap:VirtualizedContainerService.HintSize="376,275" sap2010:WorkflowViewState.IdRef="Sequence_8">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -139,6 +139,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[&quot;l'etat financier de la banque &quot;+in_banque +&quot; n'existe pas pour l'annee &quot;+in_annee]" />
                       <TerminateWorkflow DisplayName="Terminate Workflow" Exception="[new Exception(&quot;Not exist&quot;)]" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="TerminateWorkflow_2" />
+                      <ui:KillProcess ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="chrome" />
                     </Sequence>
                   </If.Then>
                   <If.Else>
@@ -274,7 +275,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:OpenBrowser>
-    <Parallel sap:VirtualizedContainerService.HintSize="1076,538" sap2010:WorkflowViewState.IdRef="Parallel_1">
+    <Parallel sap:VirtualizedContainerService.HintSize="957,51" sap2010:WorkflowViewState.IdRef="Parallel_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <Sequence sap:VirtualizedContainerService.HintSize="526,492" sap2010:WorkflowViewState.IdRef="Sequence_13">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -401,7 +408,13 @@
         </If>
       </Sequence>
     </Parallel>
-    <If Condition="[in_banque.Equals(&quot;biat&quot;)]" sap:VirtualizedContainerService.HintSize="1076,235" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[in_banque.Equals(&quot;biat&quot;)]" sap:VirtualizedContainerService.HintSize="957,51" sap2010:WorkflowViewState.IdRef="If_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <If.Then>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke PDFtoExcel-Biat workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="PDFtoExcel-Biat.xaml">
           <ui:InvokeWorkflowFile.Arguments>
@@ -410,7 +423,13 @@
         </ui:InvokeWorkflowFile>
       </If.Then>
     </If>
-    <If Condition="[in_banque.Equals(&quot;ab&quot;)]" sap:VirtualizedContainerService.HintSize="1076,235" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[in_banque.Equals(&quot;ab&quot;)]" sap:VirtualizedContainerService.HintSize="957,51" sap2010:WorkflowViewState.IdRef="If_2">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <If.Then>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke PDFtoExcel-AmenBanque workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="PDFtoExcel-AmenBanque.xaml">
           <ui:InvokeWorkflowFile.Arguments>
@@ -419,7 +438,13 @@
         </ui:InvokeWorkflowFile>
       </If.Then>
     </If>
-    <If Condition="[in_banque.Equals(&quot;tjari&quot;)]" sap:VirtualizedContainerService.HintSize="1076,235" sap2010:WorkflowViewState.IdRef="If_4">
+    <If Condition="[in_banque.Equals(&quot;tjari&quot;)]" sap:VirtualizedContainerService.HintSize="957,51" sap2010:WorkflowViewState.IdRef="If_4">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <If.Then>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke pdftoExcel workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="pdftoExcel.xaml">
           <ui:InvokeWorkflowFile.Arguments>
@@ -428,7 +453,13 @@
         </ui:InvokeWorkflowFile>
       </If.Then>
     </If>
-    <If Condition="[in_banque.Equals(&quot;uib&quot;)]" sap:VirtualizedContainerService.HintSize="1076,235" sap2010:WorkflowViewState.IdRef="If_5">
+    <If Condition="[in_banque.Equals(&quot;uib&quot;)]" sap:VirtualizedContainerService.HintSize="957,51" sap2010:WorkflowViewState.IdRef="If_5">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <If.Then>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke pdftoExcel workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="pdftoExcel.xaml">
           <ui:InvokeWorkflowFile.Arguments>
@@ -437,7 +468,13 @@
         </ui:InvokeWorkflowFile>
       </If.Then>
     </If>
-    <If Condition="[in_banque.Equals(&quot;ubci&quot;)]" sap:VirtualizedContainerService.HintSize="1076,235" sap2010:WorkflowViewState.IdRef="If_6">
+    <If Condition="[in_banque.Equals(&quot;ubci&quot;)]" sap:VirtualizedContainerService.HintSize="957,51" sap2010:WorkflowViewState.IdRef="If_6">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
       <If.Then>
         <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke PDFtoExcel-UBCI workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="PDFtoExcel-UBCI.xaml">
           <ui:InvokeWorkflowFile.Arguments>
@@ -446,8 +483,15 @@
         </ui:InvokeWorkflowFile>
       </If.Then>
     </If>
-    <ui:WriteRange AddHeaders="False" DataTable="[Output]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="1076,115" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="[&quot;C:\Users\user\Downloads\Reports\&quot;+in_banque+&quot;-&quot;+in_annee+&quot;.xlsx&quot;]" />
-    <ui:Beep sap:VirtualizedContainerService.HintSize="1076,22" sap2010:WorkflowViewState.IdRef="Beep_1" />
-    <ui:KillProcess ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="1076,22" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="chrome" />
+    <ui:WriteRange AddHeaders="False" DataTable="[Output]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="957,51" sap2010:WorkflowViewState.IdRef="WriteRange_1" SheetName="Sheet1" StartingCell="A1" WorkbookPath="[&quot;C:\Users\user\Downloads\Reports\&quot;+in_banque+&quot;-&quot;+in_annee+&quot;.xlsx&quot;]">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:WriteRange>
+    <ui:Beep sap:VirtualizedContainerService.HintSize="957,22" sap2010:WorkflowViewState.IdRef="Beep_1" />
+    <ui:KillProcess ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="957,22" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="chrome" />
   </Sequence>
 </Activity>
